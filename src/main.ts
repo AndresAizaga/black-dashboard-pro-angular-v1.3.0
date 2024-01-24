@@ -20,6 +20,19 @@ import { platformBrowserDynamic } from "@angular/platform-browser-dynamic";
 import { AppModule } from "./app/app.module";
 import { environment } from "./environments/environment";
 
+import { initializeApp } from "firebase/app";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDLSH0SiNkadvUosHcyVFXtky4NvAKI4_s",
+  authDomain: "tesisjosehernandez.firebaseapp.com",
+  projectId: "tesisjosehernandez",
+  storageBucket: "tesisjosehernandez.appspot.com",
+  messagingSenderId: "835954087079",
+  appId: "1:835954087079:web:8741aedc8ce5644ac77782"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
 if (environment.production) {
   enableProdMode();
 }
